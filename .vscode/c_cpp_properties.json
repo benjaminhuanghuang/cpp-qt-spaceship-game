@@ -4,7 +4,10 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/Users/bhuang/Qt/5.12.2/ios/include/QtCore"
+                "/Users/bhuang/Qt/5.12.2/ios/include/QtCore",
+                "/Users/bhuang/Qt/5.12.2/ios/include/QtWidgets",
+                "/Users/bhuang/Qt/5.12.2/ios/include/QtGui",
+                "/Users/bhuang/Qt/5.12.2/ios/include"
             ],
             "defines": [],
             "macFrameworkPath": [],

@@ -1,0 +1,9 @@
+{
+  "files.associations": {
+    "qgraphicstextitem": "cpp",
+    "qapplication": "cpp",
+    "qmouseevent": "cpp",
+    "qdebug": "cpp",
+    "qpointf": "cpp"
+  }
+}
