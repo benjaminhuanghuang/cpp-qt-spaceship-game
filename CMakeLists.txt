@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.7)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -stdlib=libc++")
 
-set(Qt5_DIR "/Users/bhuang/Qt/5.12.2/clang_64/lib/cmake/Qt5")
+set(Qt5_DIR "/Users/bhuang/Qt/5.9.9/clang_64/lib/cmake/Qt5")
 
-project(QtGame)
+project(main.exe)
 
 find_package(Qt5 COMPONENTS Quick Core REQUIRED)
 
