@@ -4,14 +4,10 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/Users/bhuang/Qt/5.12.2/ios/include/QtCore",
-                "/Users/bhuang/Qt/5.12.2/ios/include/QtWidgets",
-                "/Users/bhuang/Qt/5.12.2/ios/include/QtGui",
-                "/Users/bhuang/Qt/5.12.2/ios/include"
+                "/Users/bhuang/Qt/5.9.9/clang_64/include"
             ],
             "defines": [],
             "macFrameworkPath": [],
-            "compilerPath": "/usr/local/bin/gcc-7",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "clang-x64"
