@@ -14,3 +14,17 @@
 ## 4 Clean up
 - set view fixed size
 - delete bullet out of screen
+
+## 5 Enemy and collide checking
+- random pos
+
+- spawn using timer
+
+- collide checking in bullet
+```
+  collidingItems();
+```
+- type checking
+``` 
+  if(typdid(*(colliding_items[i]) == typeid(Enemy)))
+```
