@@ -55,6 +55,7 @@ SOURCES       = main.cpp \
 		player.cpp \
 		bullet.cpp \
 		score.cpp \
+		health.cpp \
 		enemy.cpp moc_game.cpp \
 		moc_player.cpp \
 		moc_bullet.cpp \
@@ -64,6 +65,7 @@ OBJECTS       = main.o \
 		player.o \
 		bullet.o \
 		score.o \
+		health.o \
 		enemy.o \
 		moc_game.o \
 		moc_player.o \
@@ -257,11 +259,13 @@ DIST          = ../../../../Qt/5.9.9/clang_64/mkspecs/features/spec_pre.prf \
 		player.h \
 		bullet.h \
 		score.h \
+		health.h \
 		enemy.h main.cpp \
 		game.cpp \
 		player.cpp \
 		bullet.cpp \
 		score.cpp \
+		health.cpp \
 		enemy.cpp
 QMAKE_TARGET  = main
 DESTDIR       = 
@@ -687,8 +691,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../../Qt/5.9.9/clang_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents game.h player.h bullet.h score.h enemy.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp game.cpp player.cpp bullet.cpp score.cpp enemy.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents game.h player.h bullet.h score.h health.h enemy.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp game.cpp player.cpp bullet.cpp score.cpp health.cpp enemy.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -736,6 +740,7 @@ moc_game.cpp: ../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGra
 		../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/qobject.h \
 		score.h \
 		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGraphicsTextItem \
+		health.h \
 		game.h \
 		moc_predefs.h \
 		../../../../Qt/5.9.9/clang_64/bin/moc
@@ -805,7 +810,8 @@ main.o: main.cpp ../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/Q
 		../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/QObject \
 		../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/qobject.h \
 		score.h \
-		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGraphicsTextItem
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGraphicsTextItem \
+		health.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 game.o: game.cpp ../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGraphicsTextItem \
@@ -826,6 +832,7 @@ game.o: game.cpp ../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/Q
 		../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/QObject \
 		../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/qobject.h \
 		score.h \
+		health.h \
 		enemy.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o game.o game.cpp
 
@@ -856,7 +863,16 @@ bullet.o: bullet.cpp ../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/
 		../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/QObject \
 		../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/qobject.h \
 		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGraphicsRectItem \
-		enemy.h
+		enemy.h \
+		game.h \
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGraphicsView \
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/qgraphicsview.h \
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QWidget \
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
+		player.h \
+		score.h \
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGraphicsTextItem \
+		health.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o bullet.o bullet.cpp
 
 score.o: score.cpp ../../../../Qt/5.9.9/clang_64/lib/QtGui.framework/Headers/QFont \
@@ -866,6 +882,13 @@ score.o: score.cpp ../../../../Qt/5.9.9/clang_64/lib/QtGui.framework/Headers/QFo
 		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/qgraphicsitem.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o score.o score.cpp
 
+health.o: health.cpp ../../../../Qt/5.9.9/clang_64/lib/QtGui.framework/Headers/QFont \
+		../../../../Qt/5.9.9/clang_64/lib/QtGui.framework/Headers/qfont.h \
+		health.h \
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGraphicsTextItem \
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/qgraphicsitem.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o health.o health.cpp
+
 enemy.o: enemy.cpp ../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/QTimer \
 		../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/qtimer.h \
 		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGraphicsScene \
@@ -874,7 +897,16 @@ enemy.o: enemy.cpp ../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/QT
 		../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/QObject \
 		../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/qobject.h \
 		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGraphicsRectItem \
-		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/qgraphicsitem.h
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/qgraphicsitem.h \
+		game.h \
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGraphicsView \
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/qgraphicsview.h \
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QWidget \
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
+		player.h \
+		score.h \
+		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGraphicsTextItem \
+		health.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o enemy.o enemy.cpp
 
 moc_game.o: moc_game.cpp 

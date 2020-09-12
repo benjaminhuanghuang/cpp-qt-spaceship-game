@@ -11,6 +11,7 @@ public:
   int getScore();
 private:
   int score;
+  void drawText();
 };
 
 #endif

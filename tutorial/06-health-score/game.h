@@ -1,25 +1,27 @@
 #ifndef GAME_H
 #define GAME_H
 
-
 #include <QGraphicsView>
 #include <QWidget>
 #include <QGraphicsScene>
 
 #include "player.h"
 #include "score.h"
+#include "health.h"
 
-class Game: public QGraphicsView{
+class Game : public QGraphicsView
+{
     Q_OBJECT
 public:
     // constructors
-    Game(QWidget* parent=NULL);
+    Game(QWidget *parent = NULL);
 
     // public attributes
-    QGraphicsScene* scene;
+    QGraphicsScene *scene;
 
-    Player* player;
-    Score* score;
+    Player *player;
+    Score *score;
+    Health *health;
 };
 
 #endif

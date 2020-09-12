@@ -3,6 +3,10 @@
 #include <cstdlib>
 
 #include "enemy.h"
+#include "game.h"
+
+extern Game *game;
+
 
 Enemy::Enemy()
 {
@@ -25,6 +29,9 @@ void Enemy::move()
   setPos(x(), y() + 5);
   if (pos().y() > 600)
   {
+    // decrease the health
+    game->health->decrease();
+    
     scene()->removeItem(this);
     delete this;
   }

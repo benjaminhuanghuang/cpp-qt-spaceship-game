@@ -10,6 +10,7 @@ SOURCES += \
     player.cpp \
     bullet.cpp \
     score.cpp \
+    health.cpp \
     enemy.cpp
 
 
@@ -18,6 +19,7 @@ HEADERS += \
     player.h \ 
     bullet.h \ 
     score.h \ 
+    health.h \ 
     enemy.h
     
 
