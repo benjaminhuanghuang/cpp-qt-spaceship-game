@@ -28,3 +28,8 @@
 ``` 
   if(typdid(*(colliding_items[i]) == typeid(Enemy)))
 ```
+
+## 6 Game class, Player class, player health and score
+- QGraphicsTextItem 
+- draw the text, font, color
+
