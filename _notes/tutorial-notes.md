@@ -1,11 +1,19 @@
 
 
-##
+## 1. Create view, scene, rect
 
 
-##
+## 2. Key Event
+- Focus
+```
+  player->setFlag(QGraphicsItem::ItemIsFocusable);
+  player->setFocus();
+```
 
-
+- Event handler
+```
+  void Player::keyPressEvent(QKeyEvent *event)
+```
 
 ## 3. Shoot
 - create bullet and add it into scene
@@ -50,4 +58,8 @@
 ```
   setTransformOriginPoint(50, 50);
   setRotation(180);
+```
+- Set background
+```
+ scene->setBackgroundBrush(QBrush(QImage(":/images/bg.png")));
 ```

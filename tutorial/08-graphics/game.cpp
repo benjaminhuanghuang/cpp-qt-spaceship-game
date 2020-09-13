@@ -2,6 +2,8 @@
 #include <QFont>
 #include <QTimer>
 #include <QMediaPlayer>
+#include <QBrush>
+#include <QImage>
 
 #include "game.h"
 #include "enemy.h"
@@ -11,6 +13,8 @@ Game::Game(QWidget *parent)
   // Crete scene
   scene = new QGraphicsScene();
   scene->setSceneRect(0, 0, 800, 600);
+  // Set bachground
+  scene->setBackgroundBrush(QBrush(QImage(":/images/bg.png")));
 
   // make the scene visible by set it to QGraphicsView
   setScene(scene);
@@ -20,7 +24,7 @@ Game::Game(QWidget *parent)
 
   // Create the player
   player = new Player();
-  player->setPos(400, 500);
+  player->setPos(400, 550);
   player->setFlag(QGraphicsItem::ItemIsFocusable);
   player->setFocus();
   scene->addItem(player);

@@ -850,6 +850,10 @@ game.o: game.cpp ../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/Q
 		../../../../Qt/5.9.9/clang_64/lib/QtCore.framework/Headers/qtimer.h \
 		../../../../Qt/5.9.9/clang_64/lib/QtMultimedia.framework/Headers/QMediaPlayer \
 		../../../../Qt/5.9.9/clang_64/lib/QtMultimedia.framework/Headers/qmediaplayer.h \
+		../../../../Qt/5.9.9/clang_64/lib/QtGui.framework/Headers/QBrush \
+		../../../../Qt/5.9.9/clang_64/lib/QtGui.framework/Headers/qbrush.h \
+		../../../../Qt/5.9.9/clang_64/lib/QtGui.framework/Headers/QImage \
+		../../../../Qt/5.9.9/clang_64/lib/QtGui.framework/Headers/qimage.h \
 		game.h \
 		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/QGraphicsView \
 		../../../../Qt/5.9.9/clang_64/lib/QtWidgets.framework/Headers/qgraphicsview.h \
