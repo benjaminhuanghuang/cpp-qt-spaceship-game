@@ -1,4 +1,4 @@
-# Qt + CMake game project
+# C++ Qt spaceship game project
 
 
 ## Reference
@@ -7,7 +7,7 @@
 
 
 
-## Run 
+## Run cmake project
 ```
   cd <prject root>
   mkdir build
