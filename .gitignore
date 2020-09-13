@@ -1,3 +1,4 @@
+.DS_Store
 build/
 *.exe
 *.o
@@ -5,3 +6,5 @@ build/
 *.stash
 moc_*.cpp
 moc_*.h
+qrc_res.cpp
+.qmake.stash
